@@ -114,7 +114,6 @@ ActiveRecord::Schema.define(version: 2019_09_09_210307) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "start_at"
-    t.datetime "finish_at"
     t.datetime "finished_at"
     t.integer "status", default: 0
     t.date "scheduled_start"

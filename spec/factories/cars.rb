@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :car do
     car_model
     car_km { 200 }
-    license_plate { Faker::Vehicle.singapore_license_plate }
+    license_plate { 'Teste' }
     color { 'Azul' }
     subsidiary
 

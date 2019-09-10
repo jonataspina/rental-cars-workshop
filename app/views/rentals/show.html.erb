@@ -18,14 +18,9 @@
     <dt class="col-sm-9">---</dt>
   <% end %>
 </dl>
-<p><%= @rental.user.email %></p>
+<p><%= @rental.user.email %></p>  
 <h2>Cliente</h2>
 <p><%= @rental.customer.description %></p>
 <h2>Carro</h2>
-<%= render @rental.car %>
-<% if @rental.scheduled? %>
-  <%= link_to 'Confirmar Retirada', withdraw_rental_path(@rental), method: :post %>
-<% end %>
-<% if @rental.active? %>
-  <%= link_to "Confirmar Devolução", new_car_return_rental_path(@rental) %>
-<%end %>
+<%= render @rental.car %> 
+<%= @rental.link_action %>

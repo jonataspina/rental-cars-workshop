@@ -27,7 +27,8 @@ class RentalsController < ApplicationController
   end
 
   def show
-    @rental = Rental.find(params[:id])
+    rental = Rental.find(params[:id])
+    @rental = RentalPresenter.new(rental)
   end
 
   def new_car_return
