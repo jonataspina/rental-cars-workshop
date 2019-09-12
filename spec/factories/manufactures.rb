@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :manufacture do
-    name { 'Montadora A' }
+    sequence(:name) { |n| "Montadora #{n}" }
   end
 end
